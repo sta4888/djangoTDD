@@ -1,0 +1,57 @@
+# фреймворк
+Django>=4.1.1,<4.2.0
+
+# для админки
+django-jazzmin>=2.2.0,<2.6.0
+
+# новое поле
+django-shortuuidfield>=0.1.3
+
+# DRF
+djangorestframework>=3.13.0
+django-resized
+django-select2
+requests
+django-cors-headers
+django-mptt
+django-mptt-urls
+django-mptt-admin
+django-reversion
+# для работы с изображениями
+pillow>=10.2.0
+
+# эдитор
+django-ckeditor>=6.7.0
+django-ckeditor-5
+
+django-recaptcha
+
+# транслитерация
+pytils>=0.4.1
+
+# для логирования действий
+django-admin-logs
+
+redis
+# распределенная очередь задач
+celery
+django-celery-beat
+
+
+django-environ
+
+django-loguru
+
+psycopg2-binary
+
+coverage
+
+openpyxl
+
+python-dotenv
+
+django-image-uploader-widget
+
+pytest
+pytest-django
+pytest-cov
