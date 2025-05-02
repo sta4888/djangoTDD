@@ -1,0 +1,23 @@
+networks:
+  django-tdd-network:
+
+
+services:
+  # сервис основного приложения
+  app:
+    build: .
+    image: django-tdd
+    container_name: django-tdd-app
+    volumes:
+      - ./src:/src
+    working_dir: /src/
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+
+
+
+
+
+volumes:
+  postgres_data_django_tdd:
