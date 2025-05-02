@@ -8,20 +8,20 @@ class TestCatalogModel:
     """Тесты модели Catalog"""
 
     @pytest.fixture
-    def book(self):
+    def post(self):
         """Создание тестовой книги без сохранения в БД"""
         return Post(
             title='First Django Book',
             content='978-1-60309-3',
         )
 
-    def test_create_book_instance(self, book):
+    def test_create_book_instance(self, post):
         """Экземпляр должен быть объектом Catalog"""
-        assert isinstance(book, Post)
+        assert isinstance(post, Post)
 
-    def test_str_representation(self, book):
+    def test_str_representation(self, post):
         """Проверка строкового представления"""
-        assert str(book) == 'First Django Book'
+        assert str(post) == 'First Django Book'
 
     def test_saving_and_retrieving_book(self, django_db_setup, django_db_blocker):
         """Сохранение и получение книг из базы данных"""
