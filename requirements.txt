@@ -32,17 +32,6 @@ pytils>=0.4.1
 # для логирования действий
 django-admin-logs
 
-redis
-# распределенная очередь задач
-celery
-django-celery-beat
-
-
-django-environ
-
-django-loguru
-
-psycopg2-binary
 
 coverage
 
