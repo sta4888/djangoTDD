@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from blog.forms import AddPostForm
 from blog.models import Post
 
 
@@ -8,6 +9,7 @@ def blog(request):
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 
-def post(request, slug=None):
-    post = Post.objects.get(slug=slug)  # Получаем все посты
-    return render(request, 'blog/post.html', {'post': post})
+def post(request, id):
+    post = Post.objects.get(id=id)  # Получаем все посты
+    form = AddPostForm()
+    return render(request, 'blog/post.html', {'post': post, 'form': form})
