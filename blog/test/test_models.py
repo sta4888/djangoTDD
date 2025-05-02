@@ -40,8 +40,8 @@ class TestCatalogModel:
 
         # Получаем все книги из БД
         saved_books = Post.objects.all()
-        assert saved_books.count() == 3
+        assert saved_books.count() == 2
 
         # Проверяем сохраненные данные
-        assert saved_books[1].title == 'First Django Book'
-        assert saved_books[2].content == '978-3-60124-12'
+        assert saved_books[0].title == 'First Django Book'
+        assert saved_books[1].content == '978-3-60124-12'

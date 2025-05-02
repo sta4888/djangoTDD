@@ -16,7 +16,6 @@ class TestBlogURLs:
         found = resolve('/blog/')  # Убедись, что это правильный путь
         assert found.func == blog  # Здесь должно быть представление для /blog/
 
-
     def test_post_url_name(self, client, catalog_instance):
         """Тест для URL страницы поста с id из фикстуры"""
         url = reverse('blog:post', kwargs={'id': catalog_instance.id})  # Пример с id из фикстуры
