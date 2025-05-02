@@ -4,5 +4,5 @@ from blog.views import blog, post
 app_name = 'blog'  # Здесь мы устанавливаем пространство имен для приложения
 urlpatterns = [
     path('', blog, name='post_list'),
-    path('post/<int:id>', post, name='post'),
+    path('/post/<slug:slug>', post, name='post'),
 ]
